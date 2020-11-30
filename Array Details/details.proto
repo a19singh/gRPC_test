@@ -1,0 +1,14 @@
+syntax  = "proto3";
+
+message Details{
+    string Name = 1;
+    int64 age = 2;
+}
+
+message Adetails{
+    repeated Details details = 1;
+}
+
+service ArrayDetails{
+    rpc Personal(Details) returns (stream Details){}
+}
